@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subjects taught</title>
+    <link rel="stylesheet" href="../static/style.css"> 
+</head>
+<body>
+    <h2>Available Openings</h2>
+    <ul>
+        {% for job in subjects %}
+        <li>{{ job }}</li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Openings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>Available Jobs and Tasks</h2>
+
+    {% if jobsavailable %}
+        <ul>
+            {% for job in tasks %}
+                <li>{{ job }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No jobs available at the moment.</p>
+    {% endif %}
+
+    <p>This is the task score: {{ score }}</p>
+</body>
+</html>
